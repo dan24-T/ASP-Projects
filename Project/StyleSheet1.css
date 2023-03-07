@@ -1,0 +1,185 @@
+﻿:root {
+    --main: #191825;
+    --main2: #865DFF;
+    --sec: #E384FF;
+    --sec1: #FFA3FD;
+}
+
+body {
+    background: var(--main2);
+    color: #fff;
+    font-family:sans-serif;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.form_box {
+    position: relative;
+    width: 400px;
+    height: auto;
+    background: var(--main);
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px var(--sec1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign_up_box {
+    position: relative;
+    width: 550px;
+    height: auto;
+    background: var(--main);
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px var(--sec1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    text-align: center;
+    margin-top:50px;
+}
+
+.multi_input_box {
+    display: flex;
+}
+
+.multi_input_box .input_box {
+    position: relative;
+    width: 100%;
+    /*border-bottom: 1px solid #fff;*/
+   
+}
+
+.sign_up_box form .input_box {
+    position: relative;
+    margin: 30px 0 0 10px;
+    width: 98%;
+    /*border-bottom: 2px solid #fff;*/
+}
+
+.input_box {
+    position: relative;
+    margin: 30px 0 0 10px;
+    width: 309px;
+    /*border-bottom: 2px solid #fff;*/
+}
+
+.input_box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1em;
+    transition: .5s;
+    pointer-events: none;
+}
+
+.input_box input:invalid{
+    border-bottom: 2px solid red;
+}
+
+.input_box input:invalid ~ label
+{
+    color: red;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+    top: -1px;
+    font-size: .75em;
+}
+
+.input_box input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    outline: none;
+    font-size: 1em;
+    transition: .5s;
+    color: #fff;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+}
+input[type=submit] {
+    font-size: 17px;
+    margin-top: 10px;
+    padding: 0.5em 5em;
+    border: transparent;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    background: var(--sec);
+    color: white;
+    border-radius: 4px;
+}
+
+input[type=submit]:hover {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
+}
+
+input[type=submit]:active {
+    transform: translate(0em, 0.2em);
+}
+
+.p {
+    font-size: 11px;
+    padding: 10px;
+    text-align:center;
+}
+a{
+    color: var(--sec1);
+}
+span {
+    position: absolute;
+    top: 100%;
+    left: -30%;
+    transform: translateY(50%);
+    color: #fff;
+    font-size: 1em;
+    transition: .2s;
+    pointer-events: none;
+    opacity:0;
+    font-size: 10px;
+}
+
+.input_box input:invalid ~ span {
+    color: red;
+    position: absolute;
+    top: 90%;
+    left: 5px;
+    padding: 5px 0 0 0;
+    color: red;
+    font-size: 1em;
+    transition: .2s;
+    pointer-events: none;
+    opacity: 1;
+    font-size: 10px;
+}
+
+.multi_input_box input:invalid ~ span {
+    position: absolute;
+    top: 90%;
+    left: 5px%;
+    transform: translateY(50%);
+    color: red;
+    font-size: 1em;
+    transition: .2s;
+    pointer-events: none;
+    opacity: 1;
+    font-size: 10px;
+}

@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Project.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="Style.css" />
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <header>
+                <div class="nav">
+                    <div class="nav_logo">
+                        <h1>Viewmax</h1>
+                    </div>
+                    
+                    <input type="checkbox" id="toggle"/>
+                    <div class="hamburger" onclick="Ham(this)">
+                        <label class="navbar_toggler" for="toggle">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </label>
+                    </div>
+
+                    <div class="dropdown" id="dropdown">
+                        <div class="nav_list">
+                            <ul>
+                                <li><a href="Home.aspx">HOME</a></li>
+                                <li><a href="Home.aspx">THEATRE</a></li>
+                                <li><a href="Home.aspx">SUPPORT</a></li>
+                            </ul>
+                        </div>
+
+                         <div class="account">
+                             <p><a>LOGIN</a></p>
+                         </div>
+
+                    </div>
+                   
+                </div>
+                
+            </header>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            
+        </div>
+        <footer>
+            <p>&copy; 2022 Mysite</p>
+        </footer>
+    </form>
+
+    
+</body>
+    <script>
+        function Ham(ids) {
+            let drop = document.getElementById("dropdown");
+
+        }
+    </script>
+</html>
